@@ -9,6 +9,7 @@
 * Author URI: http://bcard777.com
 * License: GPLv2+
 */
+require_once('PiwikTracker.php');
 
 add_action( 'admin_menu', 'restapipiwik_add_admin_menu' );
 add_action( 'admin_init', 'restapipiwik_settings_init' );

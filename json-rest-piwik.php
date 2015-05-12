@@ -15,7 +15,7 @@ add_action( 'admin_menu', 'restapipiwik_add_admin_menu' );
 add_action( 'admin_init', 'restapipiwik_settings_init' );
 add_filter( 'json_serve_request', 'restapipiwik_rest_pre_serve_request' ,10, 5);
 
-function expaygs_add_admin_menu(  ) { 
+function restapipiwik_add_admin_menu(  ) { 
 
 	add_options_page( 'REST API Piwik Integration Settings', 'REST API Piwik Integration Settings', 'manage_options', 'restapipiwik_settings_generator', 'restapipiwik_settings_generator_options_page' );
 
@@ -35,7 +35,7 @@ function restapipiwik_settings_init(  ) {
 	add_settings_section(
 		'restapipiwik_pluginPage_section', 
 		__( 'Piwik Integration Setting Page', 'restapipiwik' ), 
-		'expaygs_settings_section_callback', 
+		'restapipiwik_settings_section_callback', 
 		'pluginPage'
 	);
 
@@ -111,7 +111,7 @@ function restapipiwik_text_field_3_render(  ) {
 
 }
 
-function expaygs_settings_section_callback(  ) { 
+function restapipiwik_settings_section_callback(  ) { 
 
 	echo __( 'This section description', 'restapipiwik' );
 

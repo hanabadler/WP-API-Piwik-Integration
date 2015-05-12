@@ -30,20 +30,20 @@ function restapipiwik_settings_exist(  ) {
 
 function restapipiwik_settings_init(  ) { 
 
-	register_setting( 'pluginPage', 'restapipiwik_settings' );
+	register_setting( 'restpiwikpluginPage', 'restapipiwik_settings' );
 
 	add_settings_section(
 		'restapipiwik_pluginPage_section', 
 		__( 'Piwik Integration Setting Page', 'restapipiwik' ), 
 		'restapipiwik_settings_section_callback', 
-		'pluginPage'
+		'restpiwikpluginPage'
 	);
 
 	add_settings_field( 
 		'restapipiwik_text_field_0', 
 		__( 'Piwik URL', 'restapipiwik' ), 
 		'restapipiwik_text_field_0_render', 
-		'pluginPage', 
+		'restpiwikpluginPage', 
 		'restapipiwik_pluginPage_section' 
 	);
 	
@@ -51,21 +51,21 @@ function restapipiwik_settings_init(  ) {
 		'restapipiwik_text_field_1', 
 		__( 'Website ID', 'restapipiwik' ), 
 		'restapipiwik_text_field_1_render', 
-		'pluginPage', 
+		'restpiwikpluginPage', 
 		'restapipiwik_pluginPage_section' 
 	);
 	add_settings_field( 
 		'restapipiwik_text_field_2', 
 		__( 'Authentication Token ', 'restapipiwik' ), 
 		'restapipiwik_text_field_2_render', 
-		'pluginPage', 
+		'restpiwikpluginPage', 
 		'restapipiwik_pluginPage_section' 
 	);
 	add_settings_field( 
 		'restapipiwik_text_field_3', 
 		__( 'REST Url ', 'restapipiwik' ), 
 		'restapipiwik_text_field_3_render', 
-		'pluginPage', 
+		'restpiwikpluginPage', 
 		'restapipiwik_pluginPage_section' 
 	);
 
@@ -126,8 +126,8 @@ function restapipiwik_settings_generator_options_page(  ) {
 		<h2>Piwik Integration Settings </h2>
 		
 		<?php
-		settings_fields( 'pluginPage' );
-		do_settings_sections( 'pluginPage' );
+		settings_fields( 'restpiwikpluginPage' );
+		do_settings_sections( 'restpiwikpluginPage' );
 		submit_button();
 		?>
 		
